@@ -3,17 +3,32 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "cors": "^2.8.6",
     "expo": "~57.0.26",
+    "expo-constants": "~57.0.22",
+    "expo-router": "~57.0.27",
     "expo-status-bar": "~57.0.1",
+    "express": "^5.2.1",
+    "lucide-react": "^1.52.0",
     "react": "19.2.3",
-    "react-native": "0.86.3"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/react": "~19.2.2",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
+    "api": "node server/index.cjs",
+    "typecheck": "node --stack-size=8192 node_modules/typescript/lib/tsc.js --noEmit",
+    "test:api": "node server/smoke.cjs",
+    "test:admin": "node tests/admin.cjs",
+    "test:ui": "node tests/browser.cjs",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
