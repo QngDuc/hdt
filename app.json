@@ -1,6 +1,8 @@
 {
   "expo": {
-    "name": "hdt",
+    "name": "Luyện tập trắc nghiệm",
+    "scheme": "quizpractice",
+    "plugins": ["expo-router"],
     "slug": "hdt",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,6 +22,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
